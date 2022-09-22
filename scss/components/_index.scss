@@ -1,0 +1,42 @@
+/* Index */
+.mainIndex {
+ 
+  background-image: url("../assets/fondo.jpg");
+  background-size: contain;
+  h1 {
+    -webkit-text-stroke: 2px black;
+    color: #ec3237a3;
+  }
+  p {
+    color: #fff7f7;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 70px;
+    padding-right: 70px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-weight: 600;
+  }
+}
+.sectionIndex {
+  flex-direction: column;
+  align-items: center;
+  min-height: 80vh;
+  padding-top: 20px;
+  display: flex;
+  background-color: #1b191969;
+}
+@media (min-width: 1000px) {
+.mainIndex {
+  background-size: cover;
+  min-height: 114vh;
+  p {
+    text-align: left;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+.sectionIndex {
+  min-height: 114vh;
+}
+}
