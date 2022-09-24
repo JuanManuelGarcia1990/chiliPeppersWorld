@@ -96,7 +96,7 @@ h1 {
 .cafecito {
   padding: 10px; }
 
-@media (max-width: 750px) {
+@media (max-width: 700px) {
   #menu-check:not(:checked) ~ nav {
     display: none; }
   #menu-check:checked ~ nav {
