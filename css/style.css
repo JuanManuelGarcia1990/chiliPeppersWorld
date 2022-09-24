@@ -96,7 +96,7 @@ h1 {
 .cafecito {
   padding: 10px; }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   #menu-check:not(:checked) ~ nav {
     display: none; }
   #menu-check:checked ~ nav {
@@ -144,7 +144,7 @@ h1 {
       display: block;
       text-align: right; } }
 
-@media (max-width: 200px) {
+@media (max-width: 500px) {
   .header img {
     width: 100vw; }
   #menu {
