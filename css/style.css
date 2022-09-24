@@ -144,7 +144,7 @@ h1 {
       display: block;
       text-align: right; } }
 
-@media (max-width: 400px) {
+@media (max-width: 200px) {
   .header img {
     width: 100vw; }
   #menu {
