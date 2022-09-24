@@ -209,15 +209,19 @@ h1 {
   .mainVideos h1 {
     color: #ec3237; }
 
+.positionVideos {
+  text-align: center; }
+
 .video {
   padding: 20px; }
 
+@media (max-width: 843px) {
+  .video {
+    width: 248px; } }
+
 @media (max-width: 500px) {
   .positionVideos {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end; }
+    text-align: end; }
   .video {
     width: 350px;
     height: 220px; } }
