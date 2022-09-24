@@ -1,11 +1,27 @@
 //Videos
 .mainVideos {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color:black;
+  h1 {
+    color:#ec3237;
+  }
 }
 
 .video {
-    padding: 20px;
+  padding: 20px;
+}
+@media (max-width: 500px) {
+  .positionVideos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .video {
+    width: 350px;
+    height: 220px;
+  }
 }
