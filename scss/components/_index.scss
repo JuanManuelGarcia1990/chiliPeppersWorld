@@ -40,3 +40,8 @@
   min-height: 114vh;
 }
 }
+@media (max-width: 500px) {
+  .mainIndex p {
+    padding-left: 114px;
+  }
+}

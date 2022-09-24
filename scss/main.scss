@@ -34,10 +34,51 @@ h1 {
     display: inline-block;
   }
 }
-
+//Menu Hamburguesa
 #menu,
 #menu-check {
   display: none;
+}
+//Sidebar
+.side {
+  display: flex;
+}
+
+.app {
+  position: fixed;
+  display: none;
+  min-height: 100vh;
+}
+.sidebar {
+  flex: 1 1 0;
+  max-width: 250px;
+  padding: 2rem 1rem;
+  background-color: #ec3238bb;
+  h3 {
+    -webkit-text-stroke: 1px #ffffff61;
+    color: #050505e6;
+    font-family: cursive;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+  }
+  .menu {
+    margin: 0 -1rem;
+    .menu-item {
+      display: block;
+      padding: 1em;
+      color: white;
+      text-decoration: none;
+      transition: 0.2s linear;
+      &:hover {
+        color: #050505e6;
+        border-right: 5px solid black;
+      }
+    }
+    .is-active {
+      color: #050505e6;
+      border-right: 5px solid white;
+    }
+  }
 }
 
 //Footer
@@ -82,7 +123,7 @@ h1 {
   }
   #menu {
     display: block;
-    color: red;
+    color: #ec3237;
     background-color: #050505e6;
     font-size: 1.2em;
     font-weight: bold;
@@ -94,45 +135,60 @@ h1 {
     z-index: 9999;
     &:hover {
       color: #050505e6;
-      background: red;
+      background: #ec3237;
     }
   }
   #menu-cerrar {
     display: none;
   }
 
-#menu-check:checked ~ label #menu-abrir {
-  display: none;
-}
-
-#menu-check:checked ~ label #menu-cerrar {
-  display: block;
-}
-header nav {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  background-color: #ec3237;
-  padding-top: 0.5em;
-  padding-right: 1.5em;
-  opacity: 0.8;
-  color:white;
-  font-size: 1.4em;
-}
-.header {
-  justify-content: space-around;
-  a {
-    color: black;
+  #menu-check:checked ~ label #menu-abrir {
+    display: none;
   }
-}
-.list {
-  display: block;
-  text-align: right;
-  li {
+
+  #menu-check:checked ~ label #menu-cerrar {
+    display: block;
+  }
+  header nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 200px;
+    background-color: #ec3237;
+    padding-top: 0.5em;
+    padding-right: 1.5em;
+    opacity: 0.8;
+    color: white;
+    font-size: 1.4em;
+  }
+  .header {
+    justify-content: space-around;
+    a {
+      color: #050505e6;
+    }
+  }
+  .list {
     display: block;
     text-align: right;
+    li {
+      display: block;
+      text-align: right;
+    }
   }
 }
+@media (max-width: 500px) {
+  .header img {
+    width: 100vw;
+  }
+  #menu {
+    display: none;
+  }
+  .header nav {
+    display: none;
+  }
+  .app {
+    display: flex;
+  }
 }
+
 @import "./components/index";

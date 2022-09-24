@@ -33,6 +33,40 @@ h1 {
 #menu-check {
   display: none; }
 
+.side {
+  display: flex; }
+
+.app {
+  position: fixed;
+  display: none;
+  min-height: 100vh; }
+
+.sidebar {
+  flex: 1 1 0;
+  max-width: 250px;
+  padding: 2rem 1rem;
+  background-color: #ec3238bb; }
+  .sidebar h3 {
+    -webkit-text-stroke: 1px #ffffff61;
+    color: #050505e6;
+    font-family: cursive;
+    text-transform: uppercase;
+    margin-bottom: 0.5em; }
+  .sidebar .menu {
+    margin: 0 -1rem; }
+    .sidebar .menu .menu-item {
+      display: block;
+      padding: 1em;
+      color: white;
+      text-decoration: none;
+      transition: 0.2s linear; }
+      .sidebar .menu .menu-item:hover {
+        color: #050505e6;
+        border-right: 5px solid black; }
+    .sidebar .menu .is-active {
+      color: #050505e6;
+      border-right: 5px solid white; }
+
 .footer {
   background-color: #050505e6;
   display: flex;
@@ -69,7 +103,7 @@ h1 {
     display: block; }
   #menu {
     display: block;
-    color: red;
+    color: #ec3237;
     background-color: #050505e6;
     font-size: 1.2em;
     font-weight: bold;
@@ -81,7 +115,7 @@ h1 {
     z-index: 9999; }
     #menu:hover {
       color: #050505e6;
-      background: red; }
+      background: #ec3237; }
   #menu-cerrar {
     display: none; }
   #menu-check:checked ~ label #menu-abrir {
@@ -92,7 +126,7 @@ h1 {
     position: absolute;
     top: 0;
     right: 0;
-    height: 100%;
+    height: 200px;
     background-color: #ec3237;
     padding-top: 0.5em;
     padding-right: 1.5em;
@@ -102,13 +136,23 @@ h1 {
   .header {
     justify-content: space-around; }
     .header a {
-      color: black; }
+      color: #050505e6; }
   .list {
     display: block;
     text-align: right; }
     .list li {
       display: block;
       text-align: right; } }
+
+@media (max-width: 500px) {
+  .header img {
+    width: 100vw; }
+  #menu {
+    display: none; }
+  .header nav {
+    display: none; }
+  .app {
+    display: flex; } }
 
 /* Index */
 .mainIndex {
@@ -145,3 +189,7 @@ h1 {
       padding-right: 120px; }
   .sectionIndex {
     min-height: 114vh; } }
+
+@media (max-width: 500px) {
+  .mainIndex p {
+    padding-left: 114px; } }
