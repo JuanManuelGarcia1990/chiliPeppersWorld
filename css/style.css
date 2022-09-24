@@ -15,11 +15,10 @@ h1 {
   justify-content: flex-start;
   background-color: #050505e6;
   flex-wrap: wrap; }
-
-header a {
-  color: #ffffffed;
-  text-decoration: none;
-  padding-inline: 10px; }
+  .header a {
+    color: #ffffffed;
+    text-decoration: none;
+    padding-inline: 10px; }
 
 .list {
   display: flex;
@@ -29,6 +28,10 @@ header a {
     margin: 0 15px;
     color: white;
     display: inline-block; }
+
+#menu,
+#menu-check {
+  display: none; }
 
 .footer {
   background-color: #050505e6;
@@ -45,9 +48,8 @@ header a {
 .footerList {
   display: flex;
   list-style: none; }
-
-.footerList a {
-  padding-inline: 15px; }
+  .footerList a {
+    padding-inline: 15px; }
 
 .fa-linkedin {
   color: #ec3237;
@@ -59,6 +61,54 @@ header a {
 
 .cafecito {
   padding: 10px; }
+
+@media (max-width: 800px) {
+  #menu-check:not(:checked) ~ nav {
+    display: none; }
+  #menu-check:checked ~ nav {
+    display: block; }
+  #menu {
+    display: block;
+    color: red;
+    background-color: #050505e6;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: 3px solid white;
+    border-radius: 0.3em;
+    position: absolute;
+    right: 0.5em;
+    top: 8.5em;
+    z-index: 9999; }
+    #menu:hover {
+      color: #050505e6;
+      background: red; }
+  #menu-cerrar {
+    display: none; }
+  #menu-check:checked ~ label #menu-abrir {
+    display: none; }
+  #menu-check:checked ~ label #menu-cerrar {
+    display: block; }
+  header nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: #ec3237;
+    padding-top: 0.5em;
+    padding-right: 1.5em;
+    opacity: 0.8;
+    color: white;
+    font-size: 1.4em; }
+  .header {
+    justify-content: space-around; }
+    .header a {
+      color: black; }
+  .list {
+    display: block;
+    text-align: right; }
+    .list li {
+      display: block;
+      text-align: right; } }
 
 /* Index */
 .mainIndex {
