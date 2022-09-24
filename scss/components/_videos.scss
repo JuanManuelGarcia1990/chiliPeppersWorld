@@ -1,0 +1,11 @@
+//Videos
+.mainVideos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.video {
+    padding: 20px;
+}

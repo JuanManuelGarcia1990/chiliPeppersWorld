@@ -199,3 +199,12 @@ h1 {
 @media (max-width: 500px) {
   .mainIndex p {
     padding-left: 114px; } }
+
+.mainVideos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+.video {
+  padding: 20px; }
