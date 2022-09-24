@@ -96,6 +96,12 @@ h1 {
 .cafecito {
   padding: 10px; }
 
+@media (min-width: 901px) {
+  .header {
+    flex-direction: column; }
+    .header img {
+      width: fit-content; } }
+
 @media (max-width: 900px) {
   #menu-check:not(:checked) ~ nav {
     display: none; }
