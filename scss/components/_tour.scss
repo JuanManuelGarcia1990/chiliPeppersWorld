@@ -1,0 +1,21 @@
+//Tour
+.fechaTour {
+    display: flex;
+    flex-direction: row;
+    padding: 25px;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+}
+.lugar {
+    display: flex;
+    flex-direction: column;
+    p {
+        font-size:large
+    }
+}
+
+.titulos {
+    font-size: x-large;
+    font-weight: 900;
+}

@@ -6,8 +6,7 @@
 h1 {
   text-align: center;
   font-family: cursive;
-  font-weight: bolder;
-  display: flex; }
+  font-weight: bolder; }
 
 .header {
   display: flex;
@@ -225,3 +224,21 @@ h1 {
   .video {
     width: 350px;
     height: 220px; } }
+
+.fechaTour {
+  display: flex;
+  flex-direction: row;
+  padding: 25px;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center; }
+
+.lugar {
+  display: flex;
+  flex-direction: column; }
+  .lugar p {
+    font-size: large; }
+
+.titulos {
+  font-size: x-large;
+  font-weight: 900; }
