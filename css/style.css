@@ -18,6 +18,8 @@ h1 {
     color: #ffffffed;
     text-decoration: none;
     padding-inline: 10px; }
+    .header a:hover {
+      color: #ec3238bb; }
 
 .list {
   display: flex;
@@ -27,6 +29,8 @@ h1 {
     margin: 0 15px;
     color: white;
     display: inline-block; }
+    .list li .active {
+      color: #ec3238bb; }
 
 #menu,
 #menu-check {
@@ -142,12 +146,16 @@ h1 {
     justify-content: space-around; }
     .header a {
       color: #050505e6; }
+      .header a:hover {
+        color: white; }
   .list {
     display: block;
     text-align: right; }
     .list li {
       display: block;
-      text-align: right; } }
+      text-align: right; }
+      .list li .active {
+        color: white; } }
 
 @media (max-width: 500px) {
   .header img {

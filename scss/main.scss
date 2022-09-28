@@ -20,6 +20,9 @@ h1 {
     color: #ffffffed;
     text-decoration: none;
     padding-inline: 10px;
+    &:hover {
+      color: #ec3238bb;
+    }
   }
 }
 .list {
@@ -30,8 +33,12 @@ h1 {
     margin: 0 15px;
     color: white;
     display: inline-block;
+    .active {
+      color: #ec3238bb;
+    }
   }
 }
+
 //Menu Hamburguesa
 #menu,
 #menu-check {
@@ -166,6 +173,9 @@ h1 {
     justify-content: space-around;
     a {
       color: #050505e6;
+      &:hover {
+        color: white;
+      }
     }
   }
   .list {
@@ -174,6 +184,9 @@ h1 {
     li {
       display: block;
       text-align: right;
+      .active {
+        color: white;
+      }
     }
   }
 }
