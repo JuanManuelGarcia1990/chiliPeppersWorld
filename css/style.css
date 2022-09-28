@@ -171,7 +171,7 @@ h1 {
 
 /* Index */
 .mainIndex {
-  background-image: url("../assets/fondo.jpg");
+  background-image: url("../assets/fondos/backgroundInicio.jpg");
   background-size: contain; }
   .mainIndex h1 {
     -webkit-text-stroke: 2px black;
@@ -192,18 +192,15 @@ h1 {
   min-height: 80vh;
   padding-top: 20px;
   display: flex;
-  background-color: #1b191969; }
+  background-color: #5c4a4a9c; }
 
 @media (min-width: 1000px) {
   .mainIndex {
-    background-size: cover;
-    min-height: 114vh; }
+    background-size: cover; }
     .mainIndex p {
       text-align: left;
       padding-left: 120px;
-      padding-right: 120px; }
-  .sectionIndex {
-    min-height: 114vh; } }
+      padding-right: 120px; } }
 
 @media (max-width: 500px) {
   .mainIndex p {
