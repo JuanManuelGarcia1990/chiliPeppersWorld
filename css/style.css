@@ -152,12 +152,14 @@ h1 {
 @media (max-width: 500px) {
   .header img {
     width: 100vw; }
-  #menu {
-    display: none; }
   .header nav {
     display: none; }
   .app {
-    display: flex; } }
+    display: flex; }
+  #menu {
+    display: none; }
+  #menu-check:checked ~ nav {
+    display: none; } }
 
 /* Index */
 .mainIndex {
@@ -225,6 +227,9 @@ h1 {
     width: 350px;
     height: 220px; } }
 
+.mainTour {
+  background: linear-gradient(308deg, #ec3237d1, white); }
+
 .fechaTour {
   display: flex;
   flex-direction: row;
@@ -232,6 +237,19 @@ h1 {
   text-align: center;
   justify-content: space-between;
   align-items: center; }
+
+.btn-tickets {
+  background: #9e181d8a;
+  border-radius: unset;
+  font-size: larger;
+  color: white;
+  border: 1px solid white;
+  box-shadow: 5px 5px 8px #000000, -5px -5px 8px #000000;
+  padding: 0.35rem 0.75rem;
+  text-decoration: none; }
+
+.mt-2 {
+  margin-top: 0.5rem !important; }
 
 .lugar {
   display: flex;
@@ -242,3 +260,9 @@ h1 {
 .titulos {
   font-size: x-large;
   font-weight: 900; }
+
+@media (max-width: 800px) {
+  .fechaTour {
+    flex-direction: column; }
+  .lugar {
+    padding-bottom: 20px; } }

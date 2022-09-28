@@ -114,8 +114,8 @@ h1 {
     flex-direction: column;
     img {
       width: fit-content;
-  } 
-}
+    }
+  }
 }
 @media (max-width: 900px) {
   #menu-check:not(:checked) ~ nav {
@@ -181,14 +181,18 @@ h1 {
   .header img {
     width: 100vw;
   }
-  #menu {
-    display: none;
-  }
+
   .header nav {
     display: none;
   }
   .app {
     display: flex;
+  }
+  #menu {
+    display: none;
+  }
+  #menu-check:checked ~ nav {
+    display: none;
   }
 }
 

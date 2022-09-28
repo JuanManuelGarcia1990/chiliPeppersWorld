@@ -1,21 +1,46 @@
 //Tour
+.mainTour {
+  background: linear-gradient(308deg, #ec3237d1, white);
+}
 .fechaTour {
-    display: flex;
-    flex-direction: row;
-    padding: 25px;
-    text-align: center;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  padding: 25px;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn-tickets {
+  background: #9e181d8a;
+  border-radius: unset;
+  font-size: larger;
+  color: white;
+  border: 1px solid white;
+  box-shadow: 5px 5px 8px #000000, -5px -5px 8px #000000;
+  padding: 0.35rem 0.75rem;
+  text-decoration: none;
+}
+.mt-2 {
+  margin-top: 0.5rem !important;
 }
 .lugar {
-    display: flex;
-    flex-direction: column;
-    p {
-        font-size:large
-    }
+  display: flex;
+  flex-direction: column;
+  p {
+    font-size: large;
+  }
 }
 
 .titulos {
-    font-size: x-large;
-    font-weight: 900;
+  font-size: x-large;
+  font-weight: 900;
+}
+
+@media (max-width: 800px) {
+  .fechaTour {
+    flex-direction: column;
+  }
+  .lugar {
+    padding-bottom: 20px;
+  }
 }
