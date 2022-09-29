@@ -271,3 +271,15 @@ h1 {
     flex-direction: column; }
   .lugar {
     padding-bottom: 20px; } }
+
+.row {
+  max-width: 100%;
+  margin-left: 0; }
+
+.card {
+  border: none;
+  align-items: center;
+  position: initial; }
+
+.card-body {
+  text-align: center; }
