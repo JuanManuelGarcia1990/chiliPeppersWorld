@@ -71,9 +71,9 @@ h1 {
       border-right: 5px solid white; }
 
 .footer {
+  padding-top: 25px;
   background-color: #050505e6;
   display: flex;
-  height: 20vh;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
@@ -272,14 +272,31 @@ h1 {
   .lugar {
     padding-bottom: 20px; } }
 
+.mainMusica {
+  background-image: url("../assets/fondos/backgroundMusica.jpg"); }
+  .mainMusica h1 {
+    color: white; }
+
 .row {
   max-width: 100%;
   margin-left: 0; }
 
 .card {
+  color: white;
+  background-image: url("../assets/fondos/backgroundMusica.jpg");
+  background-position: inherit;
   border: none;
   align-items: center;
   position: initial; }
 
 .card-body {
   text-align: center; }
+
+.btn-primary {
+  color: #050505e6;
+  background-color: #ec3238bb;
+  border-color: #050505e6; }
+  .btn-primary:hover {
+    color: #ec3238bb;
+    background-color: #050505e6;
+    border-color: #ec3238bb; }

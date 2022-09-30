@@ -1,10 +1,19 @@
 //Musica
+.mainMusica {
+    background-image: url("../assets/fondos/backgroundMusica.jpg");
+    h1 {
+        color: white;
+    }
+}
 .row {
     max-width: 100%;
     margin-left: 0;
     // justify-content: end !important;
 }
 .card {
+    color: white;
+    background-image: url("../assets/fondos/backgroundMusica.jpg");
+    background-position: inherit;
     border: none;
     align-items: center;
     position: initial;
@@ -12,4 +21,15 @@
 }
 .card-body {
     text-align: center;
+}
+.btn-primary {
+    color: #050505e6;
+    background-color: #ec3238bb;
+    border-color:#050505e6;
+    &:hover {
+        color: #ec3238bb;
+        background-color: #050505e6;
+        border-color: #ec3238bb;;
+
+    }
 }
