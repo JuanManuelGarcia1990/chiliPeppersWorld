@@ -300,3 +300,9 @@ h1 {
     color: #ec3238bb;
     background-color: #050505e6;
     border-color: #ec3238bb; }
+
+@media (max-width: 576px) {
+  .mainMusica {
+    background-image: url("../assets/fondos/backgroundMusica.jpg"); }
+  .card {
+    width: 100% !important; } }
