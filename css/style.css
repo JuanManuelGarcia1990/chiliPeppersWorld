@@ -273,7 +273,7 @@ h1 {
     padding-bottom: 20px; } }
 
 .mainMusica {
-  background-image: url("../assets/fondos/backgroundMusica.jpg"); }
+  background-image: linear-gradient(108deg, #050505e6, #ec3238bb); }
   .mainMusica h1 {
     color: white; }
 
