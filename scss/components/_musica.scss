@@ -1,6 +1,6 @@
 //Musica
 .mainMusica {
-  background-image: linear-gradient(108deg, #050505e6, #ec3238bb);
+  background-image: url("../assets/fondos/backgroundMusica.jpg");
   h1 {
     color: white;
   }
@@ -34,19 +34,15 @@
   }
 }
 
-@media (min-width:1031px) {
-  .mainMusica {
-    h5 {
-      font-size: medium;
+@media (min-width: 1031px) {
+  .mainMusica h5 {
+    font-size: medium;
   }
-  } 
 }
+
 @media (max-width: 576px) {
-  .mainMusica {
-    background-image: url("../assets/fondos/backgroundMusica.jpg");
-    h5 {
-      font-size: x-large;
-    }
+  .mainMusica h5 {
+    font-size: x-large;
   }
   .card {
     width: 100% !important;

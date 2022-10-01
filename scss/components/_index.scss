@@ -1,6 +1,5 @@
 /* Index */
 .mainIndex {
- 
   background-image: url("../assets/fondos/backgroundInicio.jpg");
   background-size: contain;
   h1 {
@@ -27,14 +26,14 @@
   background-color: #5c4a4a9c;
 }
 @media (min-width: 1000px) {
-.mainIndex {
-  background-size: cover;
-  p {
-    text-align: left;
-    padding-left: 120px;
-    padding-right: 120px;
+  .mainIndex {
+    background-size: cover;
+    p {
+      text-align: left;
+      padding-left: 120px;
+      padding-right: 120px;
+    }
   }
-}
 }
 @media (max-width: 500px) {
   .mainIndex p {
