@@ -276,6 +276,8 @@ h1 {
   background-image: linear-gradient(108deg, #050505e6, #ec3238bb); }
   .mainMusica h1 {
     color: white; }
+  .mainMusica h5 {
+    font-size: small; }
 
 .row {
   max-width: 100%;
@@ -301,8 +303,14 @@ h1 {
     background-color: #050505e6;
     border-color: #ec3238bb; }
 
+@media (min-width: 1031px) {
+  .mainMusica h5 {
+    font-size: medium; } }
+
 @media (max-width: 576px) {
   .mainMusica {
     background-image: url("../assets/fondos/backgroundMusica.jpg"); }
+    .mainMusica h5 {
+      font-size: x-large; }
   .card {
     width: 100% !important; } }

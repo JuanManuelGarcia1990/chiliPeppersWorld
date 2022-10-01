@@ -4,6 +4,9 @@
   h1 {
     color: white;
   }
+  h5 {
+    font-size: small;
+  }
 }
 .row {
   max-width: 100%;
@@ -30,9 +33,20 @@
     border-color: #ec3238bb;
   }
 }
+
+@media (min-width:1031px) {
+  .mainMusica {
+    h5 {
+      font-size: medium;
+  }
+  } 
+}
 @media (max-width: 576px) {
   .mainMusica {
     background-image: url("../assets/fondos/backgroundMusica.jpg");
+    h5 {
+      font-size: x-large;
+    }
   }
   .card {
     width: 100% !important;
