@@ -24,12 +24,11 @@ const armarDivHTML = (cd)=> {
     </div>`
 }
 
-//Cargar los productos en los divs
 
 const cargarProductos = (array)=> {
     let divHTML = ""
         if (array.length > 0) {
-            array.forEach(cd => divHTML += armarDivHTML(cd))
+            array.forEach((cd) => divHTML += armarDivHTML(cd))
         } else {
             divHTML = "<h2>Error al cargar productos</h2>"
         }
@@ -37,7 +36,7 @@ const cargarProductos = (array)=> {
 }
 
 //Activar el evento CLICK por cada botón dinámico generado
-const activarCarrito = ()=> {
+const activarClick = ()=> {
     const botonesAdd = document.querySelectorAll("button.btn.btn-dark")
           botonesAdd.forEach(btn => {
             btn.addEventListener("click", (e)=> {
@@ -51,7 +50,7 @@ const activarCarrito = ()=> {
 }
 
 cargarProductos(cds)
-activarCarrito()
+activarClick()
 
 const buscarCd = (codigo)=> cds.find(cd => cd.codigo === parseInt(codigo))
 
