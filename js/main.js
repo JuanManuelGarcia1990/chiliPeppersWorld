@@ -9,7 +9,7 @@ carrito.push(...recuperarCarrito())
 
 const armarDivHTML = (cd)=> {
     return `
-    <img src="${cd.imagen}" class="card-img-top" alt="theGetaway" />
+    <img src="${cd.imagen}" class="card-img-top" alt="${cd.nombre}" />
     <div id="product" class="card-body">
         <h5 class="card-title">${cd.nombre}</h5>
         <p class="card-text">${cd.anio}</p>
@@ -80,4 +80,4 @@ function verCarrito() {
 }
 
 const btnVerCarrito = document.querySelector("button#verCarrito")
-btnVerCarrito.addEventListener("click", verCarrito)
+document.addEventListener("click", btnVerCarrito)
