@@ -45,45 +45,7 @@ h1 {
   display: none;
 }
 //Sidebar
-.side {
-  display: flex;
-}
-.app {
-  position: fixed;
-  display: none;
-  min-height: 100vh;
-}
-.sidebar {
-  flex: 1 1 0;
-  max-width: 250px;
-  padding: 2rem 1rem;
-  background-color: #ec3238bb;
-  h3 {
-    -webkit-text-stroke: 1px #ffffff61;
-    color: #050505e6;
-    font-family: cursive;
-    text-transform: uppercase;
-    margin-bottom: 0.5em;
-  }
-  .menu {
-    margin: 0 -1rem;
-    .menu-item {
-      display: block;
-      padding: 1em;
-      color: white;
-      text-decoration: none;
-      transition: 0.2s linear;
-      &:hover {
-        color: #050505e6;
-        border-right: 5px solid black;
-      }
-    }
-    .is-active {
-      color: #050505e6;
-      border-right: 5px solid white;
-    }
-  }
-}
+
 //Footer
 .footer {
   padding-top: 25px;
@@ -190,26 +152,10 @@ h1 {
     }
   }
 }
-@media (max-width: 500px) {
-  .header img {
-    width: 100vw;
-  }
-
-  .header nav {
-    display: none;
-  }
-  .app {
-    display: flex;
-  }
-  #menu {
-    display: none;
-  }
-  #menu-check:checked ~ nav {
-    display: none;
-  }
-}
 
 @import "./components/index";
 @import "./components/videos";
 @import "./components/tour";
 @import "./components/musica";
+@import "./components/tienda";
+

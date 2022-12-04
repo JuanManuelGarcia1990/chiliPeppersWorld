@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shorcut icon" href="../assets/shorcutIcon/shorcutIcon.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/e3bfd725cb.js" crossorigin="anonymous"></script>
+    <!-- Css Propio -->
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/productos.js"></script>
+    <script defer src="../js/main.js"></script>
+    <title>Chili Peppers World</title>
+</head>
+
+<body>
+    <header class="header">
+        <img src="../assets/logo/logo.png" alt="logo">
+        <!-- Menu Hamburguesa -->
+        <input type="checkbox" id="menu-check">
+        <label id="menu" for="menu-check">
+            <span id="menu-abrir">&#9776;</span>
+            <span id="menu-cerrar">X</span>
+        </label>
+        <nav>
+            <ul class="list">
+                <li><a href="../index.html">INICIO</a></li>
+                <li><a href="./tour.html">TOUR</a></li>
+                <li><a href="./videos.html">VIDEOS</a></li>
+                <li><a href="./musica.html">MÚSICA</a></li>
+                <li><a class="active" href="./tienda.html">TIENDA</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="mainTienda">
+        <h1>Tienda</h1>
+        <div class="productos">
+            <div class="producto" id="cardTienda">
+                <img src="../assets/logo/logo.png" alt="imagen producto">
+                <p>NOMBRE PRODUCTO</p>
+                <p>PRECIO</p>
+                <p>CODIGO</p>
+                <button class="button" title="Agregar al carrito">🛒</button>
+            </div>
+        </div>
+        <button id="verCarrito">VER CARRITO</button>
+    </main>
+    <footer class="footer">
+        <ul class="footerList">
+            <li>
+                <a href="https://www.linkedin.com/in/juanmanuelgarcia90" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/JuanManuelGarcia1990" target="_blank"><i class="fa-brands fa-github"></i>
+                </a>
+            </li>
+        </ul>
+        <a href='https://cafecito.app/pelado90' class="cafecito" rel='noopener' target='_blank'><img
+                srcset='https://cdn.cafecito.app/imgs/buttons/button_1.png 1x, https://cdn.cafecito.app/imgs/buttons/button_1_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_1_3.75x.png 3.75x'
+                src='https://cdn.cafecito.app/imgs/buttons/button_1.png' alt='Invitame un café en cafecito.app' /></a>
+        <p>Página web desarrollada por Pelado90&COPY;</p>
+    </footer>
+</body>
+
+</html>

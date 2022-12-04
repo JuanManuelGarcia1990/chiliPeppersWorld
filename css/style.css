@@ -36,40 +36,6 @@ h1 {
 #menu-check {
   display: none; }
 
-.side {
-  display: flex; }
-
-.app {
-  position: fixed;
-  display: none;
-  min-height: 100vh; }
-
-.sidebar {
-  flex: 1 1 0;
-  max-width: 250px;
-  padding: 2rem 1rem;
-  background-color: #ec3238bb; }
-  .sidebar h3 {
-    -webkit-text-stroke: 1px #ffffff61;
-    color: #050505e6;
-    font-family: cursive;
-    text-transform: uppercase;
-    margin-bottom: 0.5em; }
-  .sidebar .menu {
-    margin: 0 -1rem; }
-    .sidebar .menu .menu-item {
-      display: block;
-      padding: 1em;
-      color: white;
-      text-decoration: none;
-      transition: 0.2s linear; }
-      .sidebar .menu .menu-item:hover {
-        color: #050505e6;
-        border-right: 5px solid black; }
-    .sidebar .menu .is-active {
-      color: #050505e6;
-      border-right: 5px solid white; }
-
 .footer {
   padding-top: 25px;
   background-color: #050505e6;
@@ -157,18 +123,6 @@ h1 {
       .list li .active {
         color: white; } }
 
-@media (max-width: 500px) {
-  .header img {
-    width: 100vw; }
-  .header nav {
-    display: none; }
-  .app {
-    display: flex; }
-  #menu {
-    display: none; }
-  #menu-check:checked ~ nav {
-    display: none; } }
-
 /* Index */
 .mainIndex {
   background-image: url("../assets/fondos/backgroundInicio.jpg");
@@ -227,7 +181,7 @@ h1 {
 
 @media (max-width: 500px) {
   .positionVideos {
-    text-align: end; }
+    text-align: center; }
   .video {
     width: 313px;
     height: 220px; } }
@@ -312,3 +266,29 @@ h1 {
     font-size: x-large; }
   .card {
     width: 100% !important; } }
+
+.mainTienda {
+  background-image: url("../assets/fondos/backgroundTienda.jfif");
+  background-repeat: round; }
+
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%; }
+
+.producto {
+  display: flex;
+  width: 25%;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 20px; }
+  .producto p {
+    text-align: center; }
+
+@media (max-width: 900px) {
+  .producto {
+    width: 50%; } }
+
+@media (max-width: 500px) {
+  .producto {
+    width: 100%; } }

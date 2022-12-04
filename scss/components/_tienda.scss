@@ -1,0 +1,33 @@
+.mainTienda {
+    background-image: url("../assets/fondos/backgroundTienda.jfif");
+    background-repeat: round;
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.producto {
+    display: flex;
+    width: 25%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 20px;
+    p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 900px) {
+    .producto {
+        width: 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    .producto {
+        width: 100%;
+    }
+}
