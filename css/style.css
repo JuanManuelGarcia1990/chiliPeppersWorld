@@ -279,6 +279,14 @@ h1 {
   width: 50vw;
   text-align: center; }
 
+.ver-carrito {
+  position: fixed;
+  font-size: 25px;
+  right: 15px;
+  background-color: red;
+  border-radius: 50px;
+  cursor: pointer; }
+
 /*product cards*/
 .shop-content {
   display: flex;
@@ -297,20 +305,18 @@ h1 {
     border-radius: 50px; }
   .card h3 {
     text-align: center; }
-
-.card button {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px; }
-
-.card button:hover {
-  opacity: 0.7; }
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px; }
+    .card button:hover {
+      opacity: 0.7; }
 
 /*modal content*/
 .modal-container {
