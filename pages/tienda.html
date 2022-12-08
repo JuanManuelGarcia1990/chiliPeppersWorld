@@ -10,8 +10,9 @@
     <script src="https://kit.fontawesome.com/e3bfd725cb.js" crossorigin="anonymous"></script>
     <!-- Css Propio -->
     <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/productos.js"></script>
-    <script defer src="../js/main.js"></script>
+    <script defer src="../js/products.js"></script>
+    <script defer src="../js/app.js"></script>
+    <script defer src="../js/carrito.js"></script>
     <title>Chili Peppers World</title>
 </head>
 
@@ -35,13 +36,28 @@
         </nav>
     </header>
     <main class="mainTienda">
-        <h1>Tienda</h1>
-        <div class="productos" id="cardTienda">
-            <!-- Cards Generadas con js -->
+        <h1 id="titulo">Tienda</h1>
+        <h1 class="ver-carrito" id="verCarrito">🛒<span id="cantidadCarrito" class="cantidad-carrito"></span></h1>
+        <div class="barra">
+            <input type="search" list="ultimasBusquedas" id="inputSearch" placeholder="Ingrese el producto a buscar"
+                class="">
         </div>
-        <button id="verCarrito">VER CARRITO</button>
+
+        <!--shop content-->
+        <div id="shopContent" class="shop-content">
+
+            <!-- <div class="producto">
+                <img src="../assets/fondo.jpg" alt="">
+                <h3>nombre</h3>
+                <p>precio</p>
+            </div>-->
+        </div>
+
+        <!--modal container-->
+        <div id="modal-container" class="modal-container"></div>
+
     </main>
-    <footer class="footer">
+    <footer class="footer" id="">
         <ul class="footerList">
             <li>
                 <a href="https://www.linkedin.com/in/juanmanuelgarcia90" target="_blank"><i
@@ -58,6 +74,7 @@
                 src='https://cdn.cafecito.app/imgs/buttons/button_1.png' alt='Invitame un café en cafecito.app' /></a>
         <p>Página web desarrollada por Pelado90&COPY;</p>
     </footer>
+
 </body>
 
 </html>

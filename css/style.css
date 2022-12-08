@@ -237,7 +237,7 @@ h1 {
   max-width: 100%;
   margin-left: 0; }
 
-.card {
+.cardMusica {
   color: white;
   background-image: url("../assets/fondos/backgroundMusica.jpg");
   background-position: inherit;
@@ -264,31 +264,111 @@ h1 {
 @media (max-width: 576px) {
   .mainMusica h5 {
     font-size: x-large; }
-  .card {
+  .cardMusica {
     width: 100% !important; } }
 
 .mainTienda {
   background-image: url("../assets/fondos/backgroundTienda.jfif");
   background-repeat: round; }
 
-.productos {
+.barra {
+  display: flex;
+  justify-content: center; }
+
+#inputSearch {
+  width: 50vw;
+  text-align: center; }
+
+/*product cards*/
+.shop-content {
   display: flex;
   flex-wrap: wrap;
   width: 100%; }
 
-.producto {
+.card {
   display: flex;
   width: 25%;
   flex-direction: column;
   flex-wrap: nowrap;
   padding: 20px; }
-  .producto p {
+  .card p {
+    text-align: center; }
+  .card img {
+    border-radius: 50px; }
+  .card h3 {
     text-align: center; }
 
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px; }
+
+.card button:hover {
+  opacity: 0.7; }
+
+/*modal content*/
+.modal-container {
+  width: 80%;
+  margin: 0 10%;
+  max-height: 88vh;
+  color: #fff;
+  background-color: #121212;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*for the top*/
+  position: fixed;
+  overflow: auto;
+  z-index: 9;
+  top: 12vh;
+  scrollbar-color: none; }
+
+.modal-container::-webkit-scrollbar {
+  display: none; }
+
+.modal-header {
+  display: flex;
+  justify-content: space-around;
+  background-color: #0a0909;
+  color: #fff;
+  width: 100%; }
+
+.modal-header-title {
+  justify-self: start; }
+
+.modal-header-button {
+  cursor: pointer; }
+
+.modal-container > .modal-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  margin: 10px; }
+
+.modal-container > div > img {
+  height: 120px;
+  width: 120px; }
+
+.total-content {
+  font-size: 25px;
+  padding: 20px;
+  text-align: center;
+  padding-top: 20px; }
+
+/*se agregaron unas lineas de css con media querys para que se adapte mejor al responsive :)*/
+/*delete button product*/
 @media (max-width: 900px) {
-  .producto {
+  .card {
     width: 50%; } }
 
 @media (max-width: 500px) {
-  .producto {
+  .card {
     width: 100%; } }
