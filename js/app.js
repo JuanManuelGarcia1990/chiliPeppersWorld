@@ -3,6 +3,17 @@ const verCarrito = document.getElementById("verCarrito");
 const modalContainer = document.getElementById("modal-container");
 const showAlert = document.getElementById("showAlert");
 const cantidadCarrito = document.getElementById("cantidadCarrito");
+const inputSearch = document.querySelector("input#inputSearch")
+
+function filtrarProductos() {
+    if (inputSearch.value.trim() !== "") {
+        let resultado = productos.filter(product => product.nombre.includes(inputSearch.value.trim()))
+            if (resultado.length > 0) {
+                cargarProductos(resultado)
+            }
+    }
+}
+
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
@@ -53,4 +64,3 @@ const saveLocal = () => {
   localStorage.setItem("carrito", JSON.stringify(carrito));
 };
 
-//get item
