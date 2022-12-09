@@ -273,11 +273,9 @@ h1 {
 
 .barra {
   display: flex;
-  justify-content: center; }
-
-#inputSearch {
-  width: 50vw;
-  text-align: center; }
+  justify-content: center;
+  width: 95%;
+  margin: 0, auto; }
 
 .ver-carrito {
   position: fixed;
