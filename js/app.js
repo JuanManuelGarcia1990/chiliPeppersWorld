@@ -14,9 +14,10 @@ let products = [];
 function cargarProductos() {
   fetch(DB)
     .then((response) => response.json())
-    .then((json) => products.push(...json));
-    cards();
+    .then((json) => products.push(...json))
+    .then(()=> cards(products))
 }
+cargarProductos(); 
 
 function cards() {
   products.forEach((product) => {
@@ -68,4 +69,4 @@ const saveLocal = () => {
   localStorage.setItem("carrito", JSON.stringify(carrito));
 };
 
-cargarProductos();
+cards();
