@@ -329,9 +329,11 @@ h1 {
   z-index: 9;
   top: 12vh;
   scrollbar-color: none; }
-
-.modal-container::-webkit-scrollbar {
-  display: none; }
+  .modal-container::-webkit-scrollbar {
+    display: none; }
+  .modal-container img {
+    height: 120px;
+    width: 120px; }
 
 .modal-header {
   display: flex;
@@ -339,24 +341,20 @@ h1 {
   background-color: #0a0909;
   color: #fff;
   width: 100%; }
+  .modal-header .modal-header-title {
+    justify-self: start; }
+  .modal-header .modal-header-button {
+    cursor: pointer; }
 
-.modal-header-title {
-  justify-self: start; }
-
-.modal-header-button {
-  cursor: pointer; }
-
-.modal-container > .modal-content {
+.modal-content {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   width: 70%;
   margin: 10px; }
-
-.modal-container > div > img {
-  height: 120px;
-  width: 120px; }
+  .modal-content span {
+    cursor: pointer; }
 
 .total-content {
   font-size: 25px;
@@ -370,4 +368,15 @@ h1 {
 
 @media (max-width: 500px) {
   .card {
-    width: 100%; } }
+    width: 100%; }
+  .modal-container {
+    width: 100%;
+    margin: 0;
+    min-height: 80vh; }
+    .modal-container img {
+      height: 80px;
+      width: 80px; }
+  .modal-content {
+    justify-content: space-between;
+    width: 100%;
+    margin: 2px; } }

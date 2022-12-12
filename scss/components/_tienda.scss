@@ -68,39 +68,39 @@
   z-index: 9;
   top: 12vh;
   scrollbar-color: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  img {
+    height: 120px;
+    width: 120px;
+  }
 }
 
-.modal-container::-webkit-scrollbar {
-  display: none;
-}
 .modal-header {
   display: flex;
   justify-content: space-around;
   background-color: #0a0909;
   color: #fff;
   width: 100%;
+  .modal-header-title {
+    justify-self: start;
+  }
+  .modal-header-button {
+    cursor: pointer;
+  }
 }
 
-.modal-header-title {
-  justify-self: start;
-}
-
-.modal-header-button {
-  cursor: pointer;
-}
-
-.modal-container > .modal-content {
+.modal-content {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   width: 70%;
   margin: 10px;
-}
-
-.modal-container > div > img {
-  height: 120px;
-  width: 120px;
+  span {
+    cursor: pointer;
+  }
 }
 
 .total-content {
@@ -116,8 +116,23 @@
   }
 }
 
+
 @media (max-width: 500px) {
   .card {
     width: 100%;
+  }
+  .modal-container {
+    width: 100%;
+    margin: 0;
+    min-height: 80vh;
+    img {
+      height: 80px;
+      width: 80px;
+    }
+  }
+  .modal-content {
+    justify-content: space-between;
+    width: 100%;
+    margin: 2px;
   }
 }
