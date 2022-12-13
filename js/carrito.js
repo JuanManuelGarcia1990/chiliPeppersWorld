@@ -1,10 +1,10 @@
-const pintarCarrito = () => {
+const modalCarrito = () => {
   modalContainer.innerHTML = "";
   modalContainer.style.display = "flex";
   const modalHeader = document.createElement("div");
   modalHeader.className = "modal-header";
   modalHeader.innerHTML = `
-        <h1 class="modal-header-title">Carrito.</h1>
+        <h1 class="modal-header-title">Carrito</h1>
       `;
   modalContainer.append(modalHeader);
 
@@ -41,14 +41,14 @@ const pintarCarrito = () => {
         product.cantidad--;
       }
       saveLocal();
-      pintarCarrito();
+      modalCarrito();
     });
 
     let sumar = carritoContent.querySelector(".sumar");
     sumar.addEventListener("click", () => {
       product.cantidad++;
       saveLocal();
-      pintarCarrito();
+      modalCarrito();
     });
 
     let eliminar = carritoContent.querySelector(".delete-product");
@@ -64,9 +64,13 @@ const pintarCarrito = () => {
   totalBuying.className = "total-content";
   totalBuying.innerHTML = `Total a pagar: $ ${total} `;
   modalContainer.append(totalBuying);
+
+  const botonCompra = document.createElement("button");
+  modalbutton.innerText = "Comprar";
+  modalbutton.className = "botonCompra";
 };
 
-verCarrito.addEventListener("click", pintarCarrito);
+verCarrito.addEventListener("click", modalCarrito);
 
 const eliminarProducto = (id) => {
   const foundId = carrito.find((element) => element.id === id);
@@ -79,7 +83,7 @@ const eliminarProducto = (id) => {
 
   carritoCounter();
   saveLocal();
-  pintarCarrito();
+  modalCarrito();
 };
 
 const carritoCounter = () => {
