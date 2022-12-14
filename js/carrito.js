@@ -65,10 +65,20 @@ const modalCarrito = () => {
   totalBuying.innerHTML = `Total a pagar: $ ${total} `;
   modalContainer.append(totalBuying);
 
-  const botonCompra = document.createElement("button");
-  modalbutton.innerText = "Comprar";
-  modalbutton.className = "botonCompra";
+
+  // Boton Comprar
+  const modalCompra = document.createElement("div")
+  modalCompra.className = "modal-compra";
+  modalContainer.append(modalCompra)
+  const botonCompra = document.createElement("button")
+  botonCompra.innerText = "Comprar";
+  botonCompra.className = "botonCompra";
+  modalCompra.append(botonCompra)
+
 };
+
+
+
 
 verCarrito.addEventListener("click", modalCarrito);
 
