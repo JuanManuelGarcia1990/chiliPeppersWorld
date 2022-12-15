@@ -55,8 +55,7 @@ function cards() {
           precio: product.precio,
           cantidad: product.cantidad,
         });
-        console.log(carrito);
-        console.log(carrito.length);
+        console.warn("Producto agregado al carrito")
         carritoCounter();
         saveLocal();
       }
