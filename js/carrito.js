@@ -87,6 +87,8 @@ const modalCarrito = () => {
           'success'
         )
         carrito.length = []
+        carritoCounter();
+        modalCarrito();
       }
     })
   });
