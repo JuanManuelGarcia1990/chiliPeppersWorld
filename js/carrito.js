@@ -1,4 +1,5 @@
 let compra = new Compra();
+
 //Crear Modal Carrito
 const modalCarrito = () => {
   modalContainer.innerHTML = "";
@@ -9,6 +10,7 @@ const modalCarrito = () => {
         <h1 class="modal-header-title">Carrito</h1>
       `;
   modalContainer.append(modalHeader);
+
   //Boton de cierre del modal
   const modalbutton = document.createElement("h1");
   modalbutton.innerText = "x";
@@ -18,7 +20,8 @@ const modalCarrito = () => {
   });
 
   modalHeader.append(modalbutton);
-  //Mostrar Productos seleccionados
+
+  //Mostrar productos agregados en el modal
   carrito.forEach((product) => {
     let carritoContent = document.createElement("div");
     carritoContent.className = "modal-content";
@@ -34,6 +37,7 @@ const modalCarrito = () => {
         `;
 
     modalContainer.append(carritoContent);
+
     //Restar productos en el modal
     let restar = carritoContent.querySelector(".restar");
     restar.addEventListener("click", () => {
@@ -43,6 +47,7 @@ const modalCarrito = () => {
       saveLocal();
       modalCarrito();
     });
+
     //Sumar productos en el modal
     let sumar = carritoContent.querySelector(".sumar");
     sumar.addEventListener("click", () => {
@@ -50,19 +55,21 @@ const modalCarrito = () => {
       saveLocal();
       modalCarrito();
     });
+
     //Eliminar productos del modal
     let eliminar = carritoContent.querySelector(".delete-product");
     eliminar.addEventListener("click", () => {
       eliminarProducto(product.id);
     });
   });
+
   //Modal Precio Total
   const totalBuying = document.createElement("div");
   totalBuying.className = "total-content";
   totalBuying.innerHTML = `<p id="total">Total a pagar $ ${compra.totalAPagar()}</p> `;
   modalContainer.append(totalBuying);
 
-  // Boton Comprar
+  // Finalización de compra, vaciado de carrito, del contador de carrito, y se cierra el modal
   const modalCompra = document.createElement("div");
   modalCompra.className = "modal-compra";
   modalContainer.append(modalCompra);
@@ -72,30 +79,37 @@ const modalCarrito = () => {
   modalCompra.append(botonCompra);
   botonCompra.addEventListener("click", () => {
     Swal.fire({
-      title: '¿Desea confirmar la compra?',
-      icon: 'warning',
+      background: "#121212",
+      width: "50%",
+      title: "¿Desea confirmar la compra?",
+      icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      cancelButtonText: 'Cancelar',
-      confirmButtonText: 'Confirmar'
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      cancelButtonText: "Cancelar",
+      confirmButtonText: "Confirmar",
     }).then((result) => {
       if (result.isConfirmed) {
-        Swal.fire(
-          'Compra finalizada con éxito!',
-          'Muchas gracias por su compra',
-          'success'
-        )
-        carrito.length = []
+        Swal.fire({
+          background: "black",
+          width: "50%",
+          icon: "success",
+          title: "¡Compra finalizada con éxito!",
+          text: "Muchas gracias por su compra",
+          color: 'white'
+        });
+        carrito.length = [];
         carritoCounter();
         modalCarrito();
+        modalContainer.style.display = "none";
       }
-    })
+    });
   });
 };
 
 //Ver productos dentro del modal
 verCarrito.addEventListener("click", modalCarrito);
+
 //Eliminar Productos dentro del modal
 const eliminarProducto = (id) => {
   const foundId = carrito.find((element) => element.id === id);
@@ -107,6 +121,7 @@ const eliminarProducto = (id) => {
   saveLocal();
   modalCarrito();
 };
+
 //Muestra cantidad de elementos agregados al carrito
 const carritoCounter = () => {
   cantidadCarrito.style.display = "block";
