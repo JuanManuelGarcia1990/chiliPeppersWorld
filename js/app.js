@@ -55,7 +55,15 @@ function cards() {
           precio: product.precio,
           cantidad: product.cantidad,
         });
-        console.warn("Producto agregado al carrito")
+        Swal.fire({
+          position: 'center',
+          background: 'black',
+          width: '50%',
+          title: 'Producto agregado al carrito',
+          icon: 'success',
+          showConfirmButton: false,
+          timer: 2000
+        })
         carritoCounter();
         saveLocal();
       }

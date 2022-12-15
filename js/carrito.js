@@ -56,8 +56,7 @@ const modalCarrito = () => {
       eliminarProducto(product.id);
     });
   });
-  //Precio Total
-  // const total = carrito.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
+  //Modal Precio Total
   const totalBuying = document.createElement("div");
   totalBuying.className = "total-content";
   totalBuying.innerHTML = `<p id="total">Total a pagar $ ${compra.totalAPagar()}</p> `;
@@ -72,10 +71,24 @@ const modalCarrito = () => {
   botonCompra.className = "botonCompra";
   modalCompra.append(botonCompra);
   botonCompra.addEventListener("click", () => {
-    if (confirmar = true) {
-      console.warn("Gracias por su compra");
-    }
-
+    Swal.fire({
+      title: '¿Desea confirmar la compra?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      cancelButtonText: 'Cancelar',
+      confirmButtonText: 'Confirmar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Compra finalizada con éxito!',
+          'Muchas gracias por su compra',
+          'success'
+        )
+        carrito.length = []
+      }
+    })
   });
 };
 
