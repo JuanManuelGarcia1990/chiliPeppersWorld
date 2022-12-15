@@ -362,6 +362,18 @@ h1 {
   text-align: center;
   padding-top: 20px; }
 
+.modal-compra {
+  padding-bottom: 20px; }
+  .modal-compra .botonCompra {
+    padding: 10px;
+    border-radius: 15px;
+    border-color: white;
+    border-style: double;
+    color: white;
+    font-size: x-large;
+    background-color: #121212;
+    cursor: pointer; }
+
 @media (max-width: 900px) {
   .card {
     width: 50%; } }
