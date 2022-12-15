@@ -2,7 +2,6 @@ const shopContent = document.getElementById("shopContent");
 const verCarrito = document.getElementById("verCarrito");
 const modalContainer = document.getElementById("modal-container");
 const cantidadCarrito = document.getElementById("cantidadCarrito");
-const inputSearch = document.getElementById("inputSearch");
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 let products = [];
 
@@ -33,7 +32,7 @@ function cards() {
 
     //Boton comprar/agregar al carrito
     let comprar = document.createElement("button");
-    comprar.innerText = "comprar";
+    comprar.innerText = "Comprar";
     comprar.className = "comprar";
     content.append(comprar);
     comprar.addEventListener("click", () => {
@@ -57,11 +56,13 @@ function cards() {
         Swal.fire({
           position: "center",
           background: "black",
-          width: "50%",
+          width: "70%",
           title: "Producto agregado al carrito",
           icon: "success",
+          iconColor: "red",
           showConfirmButton: false,
           timer: 2000,
+          color: "red",
         });
         carritoCounter();
         saveLocal();

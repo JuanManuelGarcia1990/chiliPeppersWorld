@@ -271,12 +271,6 @@ h1 {
   background-image: url("../assets/fondos/backgroundTienda.jfif");
   background-repeat: round; }
 
-.barra {
-  display: flex;
-  justify-content: center;
-  width: 95%;
-  margin: 0, auto; }
-
 .ver-carrito {
   position: fixed;
   font-size: 25px;
@@ -381,10 +375,17 @@ h1 {
 @media (max-width: 500px) {
   .card {
     width: 100%; }
+  .modal-container {
+    width: 100%;
+    margin: 0; }
   .modal-content {
     justify-content: space-between;
     width: 100%;
     margin: 2px; }
     .modal-content img {
       height: 80px;
-      width: 80px; } }
+      width: 80px; }
+    .modal-content h3 {
+      font-size: large; }
+    .modal-content p {
+      font-size: medium; } }

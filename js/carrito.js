@@ -16,7 +16,7 @@ const modalCarrito = () => {
   modalbutton.innerText = "x";
   modalbutton.className = "modal-header-button";
   modalbutton.addEventListener("click", () => {
-    modalContainer.style.display = "none";
+  modalContainer.style.display = "none";
   });
 
   modalHeader.append(modalbutton);
@@ -80,9 +80,11 @@ const modalCarrito = () => {
   botonCompra.addEventListener("click", () => {
     Swal.fire({
       background: "#121212",
-      width: "50%",
+      width: "70%",
       title: "¿Desea confirmar la compra?",
+      color: "white",
       icon: "warning",
+      iconColor: "red",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
@@ -92,11 +94,12 @@ const modalCarrito = () => {
       if (result.isConfirmed) {
         Swal.fire({
           background: "black",
-          width: "50%",
+          width: "70%",
           icon: "success",
+          iconColor: "red",
           title: "¡Compra finalizada con éxito!",
           text: "Muchas gracias por su compra",
-          color: 'white'
+          color: "white",
         });
         carrito.length = [];
         carritoCounter();
