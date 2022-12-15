@@ -1,3 +1,5 @@
+let compra = new Compra();
+
 const modalCarrito = () => {
   modalContainer.innerHTML = "";
   modalContainer.style.display = "flex";
@@ -58,11 +60,11 @@ const modalCarrito = () => {
     });
   });
 
-  const total = carrito.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
+  // const total = carrito.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
 
   const totalBuying = document.createElement("div");
   totalBuying.className = "total-content";
-  totalBuying.innerHTML = `Total a pagar: $ ${total} `;
+  totalBuying.innerHTML = `<p id="total">$ ${precioTotal}</p> `;
   modalContainer.append(totalBuying);
 
 
@@ -76,8 +78,6 @@ const modalCarrito = () => {
   modalCompra.append(botonCompra)
 
 };
-
-
 
 
 verCarrito.addEventListener("click", modalCarrito);
